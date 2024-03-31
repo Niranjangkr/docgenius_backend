@@ -15,7 +15,7 @@ router.post('/fetchData', async function(req, res){
         const documentData = await documentOcr.process({
             document: droppedFileBase64, // Base64 String, Base64 URI, or Buffer
             mimeType: mimeType, // mime-type of the document or image
-            prompt: `Identify every piece of text from the file, and give output in key value pair`, // system prompt for data extraction. See examples below.
+            prompt: `Given the OPD prescription file, extract the names of medicines written in the prescription as well as hospital name and address. Answer in key value pair format.`, // system prompt for data extraction. See examples below.
             pageOptions: 'ALL' // optional, defaults to 'ALL'. Determines which page of the PDF will be processed. Available options are 'ALL', 'FIRST_AND_LAST', 'FIRST', 'LAST'.
         })
     
