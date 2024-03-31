@@ -15,9 +15,7 @@ router.post('/fetchData', async function(req, res){
         const documentData = await documentOcr.process({
             document: droppedFileBase64, // Base64 String, Base64 URI, or Buffer
             mimeType: mimeType, // mime-type of the document or image
-            prompt: `invoice number, invoice amount, currency (as ISO 4217 code), dueDate, invoiceDate, serviceStartDate, serviceEndDate,
-            vendor's [name, email with @, website],
-            line items [amnt, price, qty, des, name, cur (as ISO 4217 code)]`, // system prompt for data extraction. See examples below.
+            prompt: `Identify every piece of text from the file, and give output in key value pair`, // system prompt for data extraction. See examples below.
             pageOptions: 'ALL' // optional, defaults to 'ALL'. Determines which page of the PDF will be processed. Available options are 'ALL', 'FIRST_AND_LAST', 'FIRST', 'LAST'.
         })
     
