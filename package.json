@@ -11,11 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/documentai": "^8.2.0",
+    "@google-cloud/vertexai": "^0.5.0",
+    "axios": "^1.6.8",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "llm-document-ocr": "^1.0.6"
+    "llm-document-ocr": "^1.0.6",
+    "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

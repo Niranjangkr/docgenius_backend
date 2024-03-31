@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const { DocumentOcr } = require('llm-document-ocr');
 const router = express.Router();
+
+dotenv.config();
 
 const documentOcr = new DocumentOcr({
     apiKey: process.env.OPENAI_API_KEY, // required, defaults to
