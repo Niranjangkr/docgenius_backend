@@ -96,9 +96,10 @@ router.post('/ocr', async function (req, res) {
         try {
             const response = await axios.post(url, data, { headers: headers });
             
+            const formatedOutput = JSON.parse(response?.data?.choices[0]?.message?.content)         
             res.status(200).json({
                 success: true,
-                response: response.data
+                response: formatedOutput
             })
         } catch (error) {
             console.log("formating the googledocAI output from completion api failed");
